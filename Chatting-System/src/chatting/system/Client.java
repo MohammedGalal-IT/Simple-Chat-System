@@ -15,6 +15,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Client extends JFrame {
+    
+    private final String SERVERADDRESS = "13.62.30.17"; // localhost
 
     private static Socket socket;
     private static DataInputStream din;
@@ -166,7 +168,7 @@ public class Client extends JFrame {
     private void setupNetworking() {
         try {
             appendToChat("Connecting to server...", "black");
-            socket = new Socket("localhost", 1201);
+            socket = new Socket(SERVERADDRESS, 1207);
             appendToChat("Connected to server: " + socket.getInetAddress().getHostAddress(), "darkgreen");
 
             din = new DataInputStream(socket.getInputStream());
