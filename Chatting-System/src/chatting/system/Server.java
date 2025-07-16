@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class Server {
 
-    private static final int PORT = 1201;
+    private static final int PORT = 1207;
     private static List<ClientHandler> clients = new ArrayList<>();
     private static int clientCount = 0;
 
